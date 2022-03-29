@@ -1,0 +1,310 @@
+\documentclass[11pt, notitlepage]{article}
+%\documentclass[8pt]{extarticle}
+
+% Support international characters
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage[a6paper,top=5mm,bottom=5mm,left=5mm,right=5mm]{geometry}
+\usepackage{makecell}
+\usepackage{colortbl}
+\usepackage[table]{xcolor}
+
+\renewcommand\theadfont{\bfseries}
+\begin{document}
+
+\newcommand{\begintable}{\rowcolors{2}{gray!25}{white}}
+
+\begintable
+\begin{table}[!htbp]
+  \begin{tabular}{|l|l|l|}
+    \hline
+    \multicolumn{3}{|c|}{\thead{HOWTO}} \\
+    \hline
+    \thead{Radio}
+    & \thead{What}
+    & \thead{How} \\
+    \hline
+    878UV & Set TG & \makecell[l]{Hold \texttt{0} \\ Press \texttt{PTT}} \\
+    878UV & VFO A/B & P1 \\
+    878UV & VFO/Ch & P2 \\
+    878UV & Disp VFO/M & Hold \texttt{PF1} \\
+    878UV & Monitor & Hold \texttt{PF2} \\
+    FT3D & Bank/MR & \texttt{F}, \texttt{Bank/MR} \\
+    FT3D & Bank\# & \texttt{BAND} \\
+    
+    \hline
+  \end{tabular}
+\end{table}
+
+\begintable
+\begin{table}[!htbp]
+  \begin{tabular}{|l|l|l|}
+    \hline
+    \multicolumn{3}{|c|}{\thead{APRS}} \\
+    \hline
+    \thead{Dest}
+    & \thead{Msg}
+    & \thead{What} \\
+    \hline
+    WLNK-1 & H & Help \\
+    WLNK-1 & L & List \\
+    WLNK-1 & R\# & Read \\
+    WLNK-1 & Y\# & Reply \\
+    WLNK-1 & SP dst line1 & Send \\
+    WLNK-1 & /EX & Finish send \\
+    WLNK-1 & SMS dst msg & Oneline \\
+    WLNK-1 & A & Alias \\
+    WLNK-1 & F\# & Forward \\
+    WLNK-1 & K\# & Delete \\
+    WLNK-1 & G\# & List N RMS \\
+    WLNK-1 & I & APRSLink info \\
+    WXYO & today & Weather \\
+    EMAIL & dst msg & Email \\
+    SMSGTE & dst msg & SMS \\
+    REPEAT & n2 & Get rptrs \\
+    WHERE & call & Find \\
+    WA1GOV-10 & ISS & ISS pass \\
+    \hline
+  \end{tabular}
+\end{table}
+\begintable
+\begin{table}[!htbp]
+  \scriptsize
+  \begin{tabular}{|l|r|r|r|r|r|}
+    \hline
+    \multicolumn{6}{|c|}{\thead{Repeaters}} \\
+    \hline
+    \thead{Name} & \thead{Type} & \thead{HT RX} & \thead{HT RX} & \thead{Signal} & \thead{Link} \\
+    \hline
+    GB3OY & FM & 430.950 & 438.550 & 82.5 & \\
+    GB3HR & FM & 433.350 & 434.950 & 82.5 & \\
+GB3NS & FM & 439.675 & 430.675 & 82.5 & \\
+GB3XP & FM/YSF & 145.6875 & 145.0875 & 82.5 & \\
+GB7CH & AllDigi & 439.6125 & 430.6125 & CC:3 & BM \\
+GB7HR & DMR & 439.450 & 430.450 & CC:3 &P'nix UK \\
+GB7EP & DMR & 439.400 & 430.400 & CC:3 &P'nix UK \\
+GB7NS & DMR & 439.1625 & 430.1625 & CC:3 & P'nix UK \\
+GB7CT & DMR & 145.6375 & 145.0375 & CC:3 & P'nix UK \\
+GB7OK & D-Star & 145.7125 & 145.1125 & & DCS922 E \\
+GB3GF & FM & 433.300 & 434.900 & 88.5 & \\
+MB7IBR & FM & 144.9625 & & 103.5  & \\
+MB7ABR & FM & 433.050 & & 103.5 & \\
+GB3FN & FM & 433.375 & 434.975 & 82.5 & \\
+GB3NL & FM & 145.775 & 145.175 & 82.5 & \\
+GB3EL & FM & 145.600 & 145.000 & 82.5 & \\
+GB3LV & FM & 433.050 & 433.650 & 82.5 & \\
+ISS & FM & 145.990 & 437.800 & 67.0 & \\
+% Too weak, to the north east: GB3DA & FM & 145.725 & 145.125 & 110.9 \\
+\hline
+  \end{tabular}
+\end{table}
+
+
+\definecolor{light-gray}{gray}{0.7}
+\newcommand{\myhline}{\arrayrulecolor{light-gray}\hline\arrayrulecolor{black}}
+
+\begintable
+\begin{table}[!htbp]
+  \begin{tabular}{|l|}
+    \hline
+        \thead{JS8} \\
+    \hline
+    \texttt{@APRSIS·GRID·IO91MM} \\
+    {\obeyspaces\texttt{@APRSIS·CMD·:SMSGTE···:@44…·msg}} \\
+    {\obeyspaces\texttt{@APRSIS·CMD·:EMAIL-2··:a@b…·msg}} \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\begintable
+\begin{table}[!htbp]
+  \begin{tabular}{|l|r|}
+    \hline
+    \multicolumn{2}{|c|}{\thead{Wilderness R2}} \\
+    \hline \thead{Times} & \thead{Frequencies} \\
+    \hline
+    07:00 & 52.525 \\
+    10:00 & 146.520 \\
+    13:00 & 223.500 \\
+    16:00 & 446.000 \\
+    19:00 & 1294.5 \\
+    \hline
+  \end{tabular}
+\end{table}
+
+
+\begintable
+\begin{table}[!htbp]
+  \begin{tabular}{|l|r|r|r|}
+    \hline
+    \multicolumn{4}{|c|}{\thead{OpenSpot}} \\
+    \hline
+    \thead{Command}
+    & \thead{D-Star}
+    & \thead{C4FM}
+    & \thead{DMR} \\
+    Echo & \texttt{      E} & \texttt{DGID 99} & \texttt{ID 9999} \\
+    Profile query & \texttt{      P} & \texttt{DTMF *A} & \texttt{ID 9000} \\
+    Set profile <X> & \texttt{X} & \texttt{DTMF *AX} & \texttt{ID 900X} \\
+    Status query & \texttt{I} & \texttt{DTMF *D} & \texttt{ID 9998} \\
+    Address query & \texttt{A} & \texttt{DTMF *B} & \texttt{ID 9997} \\
+    Link & \texttt{REF030CL} & WiresX & \texttt{TG ID} \\
+    Unlink  & \texttt{U} & Hold ``Band'' & \texttt{ID 4000} \\
+    \hline
+  \end{tabular}
+\end{table}
+
+\begintable
+\begin{table}[!htbp]
+\begin{tabular}{|r|r|r|}
+  \hline
+  \multicolumn{3}{|c|}{\thead{Bands}} \\
+  \hline
+  \thead{Band} & \thead{R1} & \thead{R2} \\
+  \hline
+  2200m & 0.1357-0.1378 & 0.1357-0.1378 \\
+  630m & 0.472-0.479 & 0.472-0.479 \\
+  160m & 1.810-2.000 & 1.800-2.000 \\
+  80m & 3.500-3.800 & 3.500-4.000 \\
+  60m & 5.2585-5.4065 & 5.3305-5.4035 \\
+  40m & 7.000-7.200 & 7.000-7.300 \\
+  30m & 10.100-10.150 & 10.100-10.150 \\
+  20m & 14.000-14.350 & 14.000-14.350 \\
+  17m & 18.068-18.168 & 18.068-18.168 \\
+  15m & 21.000-21.450 & 21.000-21.450 \\
+  12m & 24.890-24.990 & 24.890-24.990 \\
+  10m & 28.000-29.700 & 28.000-29.700 \\
+  6m & 50.000-52.000 & 50.000-54.000 \\
+  4m & 70.000-70.500 & - \\
+  2m & 144.0-146.0 & 144.0-148.0 \\
+  1.25m & - & 219-225 \\
+  70cm & 430-440 & 420-450 \\
+  33cm & - & 902-928 \\
+  23cm & 1240-1325 & 1240-1300 \\
+  13cm & \makecell{2310-2350 \\
+    2390-2450} & \makecell{2300-2310 \\
+    2390-2450} \\
+  9cm & 3400-3410 & 3300-3500 \\
+  6cm & \makecell{5650-5680 \\
+    5820-5850} & 5650-5925 \\
+  \hline
+\end{tabular}
+\end{table}
+
+\begintable
+\begin{table}[!htbp]
+  \small
+\begin{tabular}{|l|r|r|}
+  \hline
+  \multicolumn{3}{|c|}{\thead{Frequencies}} \\
+  \hline
+  Calling & SSB & 145.300 \\
+  Calling r1 & FM & 145.500 \\
+  Calling r2 & FM & 146.520 \\
+  Calling r1 & FM & 433.500 \\
+  Calling r2 & FM & 432.100 \& 446.000? \\
+  Calling & DV & 438.6125 \\
+  GB3VHF & SSB & 144.4285 \\
+  GB3UHF & SSB & 433.4285 \\
+  APRS & FM & 144.800 (R1), 144.390 (R2) \\
+  ISS Pkt & FM & 145.825 \\
+  ISS Pkt & FM & 437.550 \\
+  ISS SSTV & FM & 145.800 \\
+  FT8 & USB & \makecell{1.840,3.573,5.375,7.074,10.136, \\
+    14.074,18,100,21.074,24.915,28.074,\\
+    50.313,50.323,70.100,144.174} \\
+  JS8 & USB & \makecell{1.842,3.578,7.078,10.130,14.078, \\
+    18.104,21.078,24.922,28.078,\\
+    50.318,144.178} \\
+  SSTV & {\small Norm} & \makecell{3.730,3.385,7.165,7.170,7.180, \\
+    14.230,21.340,28.680} \\
+  E'y r1\&r3 & LSB & 7.110 \\
+  Emerg'y & FM & 433.700 \\
+  Emerg'y r1 & LSB & 3.760 \\
+  Emerg'y & USB & 14.300,18.160,21.360 \\
+  Emerg'y r2 & LSB & 3.750,7.060 \\
+  Emerg'y r3 & LSB & 3.600 \\
+  \hline
+\end{tabular}
+\end{table}
+
+\begintable
+\begin{table}[!htbp]
+\begin{tabular}{|l|r|r|}
+  \hline
+  \multicolumn{3}{|c|}{\thead{Packet nodes}} \\
+  \hline
+  \multicolumn{3}{|c|}{par connect ax25:///M0IPU-11} \\
+  \hline
+  M0IPU-11 & Brixton & 144.800 \\
+  \hline
+\end{tabular}
+\end{table}
+
+\begintable
+\begin{table}[!htbp]
+  \small
+\begin{tabular}{|r|l|}
+  \hline
+  \multicolumn{2}{|c|}{\thead{Talk groups}} \\
+  \hline
+  \thead{System} & \thead{Group} \\
+  \hline
+  D-Star & REF030C \\
+  D-Star & DCS005B \\
+  SystemFusion & \#31080 AmericaLink \\
+  DMR BM & 2 Local \\
+  DMR BM & 2 Local/Cluster \\
+  DMR Phoenix & 2 EU Calling \\
+  DMR BM & 8 Regional \\
+  DMR BM & 9 Local/reflector \\
+  DMR BM & 91 Worldwide \\
+  DMR BM & 92 EU \\
+  DMR BM & 93 NA \\
+  DMR BM & 240 Sweden \\
+  DMR BM & 2353 Chat \\
+  BMR Phoenix & 1 Worldwide calling \\
+  BMR Phoenix & 9 Local (TS2) \\
+  BMR Phoenix & 13 WW EN Call \\
+  BMR Phoenix & 81-84 UK User 1-4 \\
+  BMR Phoenix & 113,119,123,129 WW User 1-2 \\
+  BMR Phoenix & 235 UK Calling \\
+  BMR Phoenix & 2351 UK CQ YSF \\
+  BMR Phoenix & 2353 BM 2353 \\
+  BMR Phoenix & 9990 TS 2 Echo server \\
+  \hline
+\end{tabular}
+\end{table}
+
+\begintable
+\begin{table}[!htbp]
+\begin{tabular}{|r|r|r|r|}
+  \hline
+  \multicolumn{4}{|c|}{\thead{Coordinates}} \\
+  \hline
+  \thead{What} & \thead{Lat} & \thead{Long} & \thead{M'head} \\
+  \hline
+  Home & \makecell[r]{51.000000 \\ 51°00.0000 \\ 51°00'0.000} & \makecell[r]{-1.0 \\ -1°0.0000 \\ -0°1'00.000} & IO91mm55mm \\
+  \hline
+  % 51.53327422760298, -0.1259066415391721
+  Google & \makecell[r]{51.533274 \\ 51°31.9965 \\ 51°31'59.787} & \makecell[r]{-0.125907 \\ 0°7.5544 \\ 0°7'33.264} & IO91wm \\
+  \hline
+\end{tabular}
+\end{table}
+
+\begintable
+\begin{table}[!htbp]
+\begin{tabular}{|r|r|r|}
+  \hline
+  \multicolumn{3}{|c|}{\thead{Apps}} \\
+  \hline
+  \thead{Radio} & \thead{What} & \thead{Name} \\
+  \hline
+  D74(BT) & DV-Pict & RS-MS1A \\
+  9700(net) & DV-Pict & ST-4001A \\
+  9700(net) & DV Tether & RS-MS3A \\
+  \hline
+\end{tabular}
+\end{table}
+
+\end{document}
