@@ -11,6 +11,7 @@
 
 \renewcommand\theadfont{\bfseries}
 \begin{document}
+\makeatletter
 
 \newcommand{\begintable}{\rowcolors{2}{gray!25}{white}}
 
@@ -284,8 +285,7 @@ ISS & FM & 145.990 & 437.800 & 67.0 & \\
   \hline
   \thead{What} & \thead{Lat} & \thead{Long} & \thead{M'head} \\
   \hline
-  Home & \makecell[r]{51.000000 \\ 51°00.0000 \\ 51°00'0.000} & \makecell[r]{-1.0 \\ -1°0.0000 \\ -0°1'00.000} & IO91mm55mm \\
-  \hline
+  \@input{coordinates.tex}
   % 51.53327422760298, -0.1259066415391721
   Google & \makecell[r]{51.533274 \\ 51°31.9965 \\ 51°31'59.787} & \makecell[r]{-0.125907 \\ 0°7.5544 \\ 0°7'33.264} & IO91wm \\
   \hline
